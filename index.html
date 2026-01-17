@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Escritos</title>
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo | Blog Personal</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <nav>
-    <a href="/">Inicio</a>
-    <a href="/ahora.html">Ahora</a>
-    <a href="/fotos.html">Fotos</a>
-    <a href="/ensenanza.html">Enseñanza</a>
-  </nav>
-</header>
+    <header>
+        <h1>Eduardo</h1>
+        <p>Bienvenido a mi rincón digital</p>
+    </header>
 
-<main>
-  <section class="posts">
+    <main class="contenedor">
+        
+        <section id="sobre-mi" class="tarjeta">
+            <div class="perfil-flex">
+                <img src="imagenes/tu-foto.jpg" alt="Foto de Eduardo" class="foto-perfil">
+                <div class="texto-perfil">
+                    <h2>Sobre mí</h2>
+                    <p>¡Hola! Soy Eduardo. En este blog comparto mis proyectos, aprendizajes y fotos de mis viajes.</p>
+                </div>
+            </div>
+        </section>
 
-    <article>
-      <h2>
-        <a href="/escritos/2026-01-17.html">
-          Empezar un blog sin saber bien a dónde va
-        </a>
-      </h2>
-      <p class="date">17 de enero de 2026</p>
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div class="grid-proyectos">
+                <article class="tarjeta-min">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción corta de lo que hiciste aquí.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="tarjeta-min">
+                    <h3>Proyecto 2</h3>
+                    <p>Otro proyecto interesante en GitHub.</p>
+                    <a href="#">Leer más...</a>
+                </article>
+            </div>
+        </section>
 
-      <p class="excerpt">
-        Hace tiempo que tengo ganas de escribir, pero siempre aparece la misma
-        duda: ¿para quién, sobre qué, con qué formato? Este blog nace sin una
-        respuesta clara, y tal vez por eso mismo era necesario empezarlo…
-      </p>
+    </main>
 
-      <a class="read-more" href="/escritos/2026-01-17.html">
-        Leer más →
-      </a>
-    </article>
-
-  </section>
-</main>
-
-<footer>
-  <p>© Eduardo</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 Eduardo - Hecho con ❤️ en GitHub</p>
+    </footer>
 
 </body>
 </html>
