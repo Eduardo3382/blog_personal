@@ -1,39 +1,105 @@
+/* Configuración General */
+:root {
+    --color-principal: #2c3e50;
+    --color-acento: #3498db;
+    --color-fondo: #f8f9fa;
+    --color-texto: #333;
+    --blanco: #ffffff;
+}
+
 body {
-  font-family: Georgia, serif;
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 16px;
-  line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-nav {
-  margin-bottom: 40px;
+/* Cabecera */
+header {
+    background: linear-gradient(135deg, var(--color-principal), #4ca1af);
+    color: var(--blanco);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-nav a {
-  margin-right: 16px;
-  text-decoration: none;
-  color: #333;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+/* Contenedor Principal */
+.contenedor {
+    max-width: 900px;
+    margin: -40px auto 40px auto; /* Sube un poco para entrar en el header */
+    padding: 0 20px;
 }
 
-.post h1 {
-  margin-bottom: 8px;
+/* Tarjetas */
+.tarjeta {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
 }
 
-.date {
-  color: #777;
-  font-size: 0.9em;
+/* Sección Sobre Mí (Flexbox) */
+.perfil-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Para que funcione en móviles */
 }
 
-.excerpt {
-  margin-top: 12px;
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Foto circular */
+    object-fit: cover; /* Evita que la foto se deforme */
+    border: 4px solid var(--blanco);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.read-more {
-  display: inline-block;
-  margin-top: 8px;
+/* Grid de Proyectos */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta-min {
+    background: var(--blanco);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--color-acento);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-min:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Ajustes para Celulares */
+@media (max-width: 600px) {
+    .perfil-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
 }
